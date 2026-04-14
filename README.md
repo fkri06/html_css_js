@@ -1,3 +1,3 @@
 # roadmap-unit-converter
 
-[Roadmap.sh Unit Converter Project](https://roadmap.sh/projects/unit-converter)
+[Roadmap.sh Unit Converter Exercise Project](https://roadmap.sh/projects/unit-converter)
