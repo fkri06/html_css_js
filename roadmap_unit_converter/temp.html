@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit Converter</title>
+</head>
+
+<body>
+    <main class="main-container">
+        <div class="converter-box">
+            <div class="converter-nav">
+                <h1>Unit Converter</h1>
+                <div class="converter-link">
+                    <ul>
+                        <li>
+                            <a href="index.html">Length</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="weight.html">Weight</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="temp.html" style="text-decoration: underline;">Temperature</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="converter-content">
+                <label for="unitValue">Enter the length to convert</label>
+                <input type="text" id="unitValue">
+
+                <label for="unitFrom">Unit to Convert From:</label>
+                <select id="unitFrom">
+                    <option value="c">Celcius</option>
+                    <option value="f">Fahrenheit</option>
+                    <option value="k">Kelvin</option>
+                </select>
+
+                <label for="unitTo">Unit to Convert To:</label>
+                <select id="unitTo">
+                    <option value="c">Celcius</option>
+                    <option value="f">Fahrenheit</option>
+                    <option value="k">Kelvin</option>
+                </select>
+
+            </div>
+
+            <div id="result" style="display: none;">
+                <p>
+                    Result of your calculation:
+                </p>
+                <p id="conversionResult">
+                </p>
+            </div>
+
+            <div id="resetButtonDiv" style="display: none;">
+                <button id="resetButton">Reset</button>
+            </div>
+            <div id="convertButton">
+                <button id="button">Convert</button>
+                <p id="msg" style="color: red;"></p>
+            </div>
+        </div>
+    </main>
+    <script src="temp.js"></script>
+</body>
+
+</html>
