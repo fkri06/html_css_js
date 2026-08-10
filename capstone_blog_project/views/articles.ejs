@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header.ejs') %>
+
+    <body>
+        <nav>
+            <h1>
+                <a href="/">Welcome to My Blogs</a>
+            </h1>
+        </nav>
+
+        <div class="site-links">
+            <a href="/">/home</a><a href="/articles/<%= article_id %>">/articles/<%= article_id %></a>
+        </div>
+
+        <main class="article-container">
+            <!-- this is the specific blog content page -->
+            <h2>
+                <%= title %>
+            </h2>
+            <% for( let i=0; i < articleContents.length; i++ ) { %>
+                <p>
+                    <%= articleContents[i] %>
+                </p>
+                <% } %>
+        </main>
+
+        <%- include('partials/footer.ejs') %>
+    </body>
+
+</html>

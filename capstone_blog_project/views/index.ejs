@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header.ejs') %>
+
+    <body>
+        <nav>
+            <h1>
+                <a href="/">Welcome to My Blogs</a>
+            </h1>
+        </nav>
+
+        <div class="site-links">
+            <a href="/">/home</a>
+        </div>
+
+        <div class="create-blog">
+            <a href="/createBlog">Create a Blog</a>
+        </div>
+
+        <main class="main-container">
+            <!-- list of articles -->
+            <% if (locals.blogContents) { %>
+
+                <% for( let i=0; i < blogContents.length; i++ ) { %>
+                    <ul>
+                        <li>
+                            <a href="/articles/<%= i %>">
+                                <%= blogContents[i].title %>
+                            </a>
+
+                            <a href="/deleteBlog/<%= i %>">
+                                <span class="material-symbols-outlined">delete</span>
+                            </a>
+
+                            <a href="/editBlog/<%= i %>">
+                                <span class="material-symbols-outlined">edit_square</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <% } %>
+
+                        <% } else { %>
+                            <% } %>
+        </main>
+        <%- include('partials/footer.ejs') %>
+    </body>
+
+</html>

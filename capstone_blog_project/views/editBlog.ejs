@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header.ejs') %>
+
+    <body>
+        <nav>
+            <h1>
+                <a href="/">Welcome to My Blogs</a>
+            </h1>
+        </nav>
+
+        <div class="site-links">
+            <a href="/">/home</a><a href="/editBlog">/edit-blog</a>
+        </div>
+
+        <main class="blog-container">
+            <!-- creating a blog page -->
+            <h2>
+                Edit <%= title %>
+            </h2>
+            <form action="/editBlog/<%= article_id %>" method="POST">
+                <label for="titleBox">Title</label>
+                <input id="titleBox" type="text" name="titleBox" value="<%= title %>">
+
+                <label for="contentBox">Content</label>
+                <textarea id="contentBox" name="contentBox" rows="10"
+                    cols="40"><% content.forEach(paragraph => {%><%=paragraph+"\n\n"%><%})%></textarea>
+
+                <input type="submit" value="SAVE">
+
+            </form>
+        </main>
+
+        <%- include('partials/footer.ejs') %>
+    </body>
+
+</html>
